@@ -1,0 +1,122 @@
+#include <iostream>
+
+using namespace std;
+
+namespace BestCom
+{
+	void ShowMsg(); // 함수 선언문
+
+	void simpleFunc()
+	{
+		cout << "BestCom simpleFunc() \n";
+		ShowMsg(); // 함수를 호출하기 위해서는 반드시 함수 선언을 해야한다. 
+	}
+
+	void ShowMsg()
+	{
+		cout << "BestCom simpleFunc()() \n";
+	}
+
+}
+
+namespace ProgCom
+{
+	void simpleFunc()
+	{
+		cout << "ProgCom simpleFunc() \n";
+	}
+}
+
+using namespace BestCom;
+using namespace ProgCom;
+
+int main()
+{
+	// :: => 범위 지정 연산자
+	//BestCom::simpleFunc();
+	//BestCom::ShowMsg();
+	ShowMsg();
+
+	BestCom::simpleFunc();
+	ProgCom::simpleFunc();
+
+	return 0;
+}
+/*=================================================================================
+1. "NameSP.h" 로 함수 선언
+===================================================================================
+namespace BestCom
+{
+	void ShowMsg(); // 함수 선언문
+	
+	void simpleFunc();
+	
+}
+
+namespace ProgCom
+{
+	void simpleFunc();
+	
+}
+===================================================================================
+2. 함수 선언문을 모아둔 메서드 파일
+===================================================================================
+#include <iostream>
+
+using namespace std;
+
+#include "NameSP.h"
+
+
+namespace BestCom
+{
+	void ShowMsg(); // 함수 선언문
+
+	void simpleFunc()
+	{
+		cout << "BestCom simpleFunc() \n";
+		ShowMsg(); // 함수를 호출하기 위해서는 반드시 함수 선언을 해야한다. 
+	}
+
+	void ShowMsg()
+	{
+		cout << "BestCom simpleFunc()() \n";
+	}
+
+}
+
+namespace ProgCom
+{
+	void simpleFunc()
+	{
+		cout << "ProgCom simpleFunc() \n";
+	}
+}
+===================================================================================
+3. 함수 실행문을 모아둔 main 파일
+===================================================================================
+#include <iostream>
+
+using namespace std;
+
+#include "NameSP.h"
+
+using namespace BestCom;
+using namespace ProgCom;
+
+int main()
+{
+	// :: => 범위 지정 연산자
+	//BestCom::simpleFunc();
+	//BestCom::ShowMsg();
+
+	BestCom::simpleFunc();
+	ProgCom::simpleFunc();
+
+	ShowMsg();
+
+	cout << "End. \n";
+
+	return 0;
+}
+=================================================================================*/
