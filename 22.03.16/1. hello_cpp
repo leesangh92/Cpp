@@ -1,0 +1,48 @@
+#include <iostream> // 입, 출력 등 다양한 메서드를 포함하는 객체지향 라이브러리를 제공하는 헤더파일
+
+int main()
+{
+	int num = 100;
+
+	// std : iostream에 선언된 객체들이 std라는 namespace에 정의되어 있다. std에 있는 cout, endl을 사용하겠다.
+
+	// << : 출력 스트림 연산자
+	std::cout << "hello world" << std::endl;
+	std::cout << "INFINITT";
+	std::cout << " healthcare" << std::endl;
+	std::cout << "num : " << num << std::endl;
+	std::cout << 'A' << ", " << 3.14 << std::endl;
+
+
+	std::cout << "키보드로 데이터 입력" << std::endl;
+	cout << "키보드로 데이터 입력" << endl;
+
+	int wid, hei;
+
+	cout << "너비 : ";
+	cin >> wid; // >> : 입력 스트림 연산자
+
+	cout << "높이 : ";
+	cin >> hei;
+
+	int area = wid * hei;
+	cout << "면적은.. " << area << endl;
+
+
+
+	if (cin.fail()) // 입력 실패 확인 함수
+	{
+		cin.clear();
+		cin.ignore(100, '\n');
+	}
+
+
+
+	char ch;
+
+	cout << "한 문자 ? : ";
+	cin >> ch;
+	cout << "ch : " << ch << endl;
+
+	return 0;
+}
