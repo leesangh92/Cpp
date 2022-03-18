@@ -7,7 +7,7 @@ class Circle
 private:
 	int radius;
 public:
-	Circle() : Circle(5) // 이웃 생성자(위임 생성자) 호출 : 생성자 중 인자를 사용하는 overloading 된 메서드를 호출하고 들어온다.
+	Circle() : Circle(5) // 이웃 생성자(위임 생성자) 호출 : 생성자 중 인자를 사용하는 overloading 된 메서드를 호출하고 돌아온다.
 	{
 		cout << "Circle()" << endl;
 	}
