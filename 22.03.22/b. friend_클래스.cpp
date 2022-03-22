@@ -13,7 +13,7 @@ public:
 		cout << "showData() data : " << data << endl;
 	}
 
-	friend class BBB; /// BBB Å¬·¡½º¿¡¼­ AAA ¸â¹ö Á¢±ÙÀ» Çã¿ë
+	friend class BBB; /// BBB í´ë˜ìŠ¤ì—ì„œ AAA ë©¤ë²„ ì ‘ê·¼ì„ í—ˆìš©
 };
 
 class BBB
