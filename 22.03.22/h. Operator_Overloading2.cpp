@@ -59,20 +59,20 @@ int main()
 {
 	Point p1(1, 1);
 
-	++p1; // p1.operator++() // ¸â¹öÇÔ¼ö È£Ãâ ¹æ¹ý
+	++p1; // p1.operator++() // ë©¤ë²„í•¨ìˆ˜ í˜¸ì¶œ ë°©ë²•
 	p1.showData();
 
 	++(++p1);
 	(++(++p1)).showData();
 	p1.showData();
 
-	--p1; // p1.operator-() // ¸â¹öÇÔ¼ö È£Ãâ ¹æ¹ý
+	--p1; // p1.operator-() // ë©¤ë²„í•¨ìˆ˜ í˜¸ì¶œ ë°©ë²•
 	p1.showData();
 
 	cout << "====================" << endl;
 
-	//++p1; // p1.operator++(int) // ÈÄÀ§¿¬»ê
-	//p1++; // p1.operator++() // ÀüÀ§¿¬»ê
+	//++p1; // p1.operator++(int) // í›„ìœ„ì—°ì‚°
+	//p1++; // p1.operator++() // ì „ìœ„ì—°ì‚°
 
 	Point p2(1, 1);
 	Point p3 = p2++; // p1.operator++(int)
