@@ -2,15 +2,15 @@
 using namespace std;
 
 /*
-´ÙÀ½°ú °°ÀÌ ½ÇÇàÇÏ´Â ÇÔ¼ö Áßº¹Á¤ÀÇ¸¦ ÀÛ¼ºÇÏ½Ã¿À.
+ë‹¤ìŒê³¼ ê°™ì´ ì‹¤í–‰í•˜ëŠ” í•¨ìˆ˜ ì¤‘ë³µì •ì˜ë¥¼ ì‘ì„±í•˜ì‹œì˜¤.
 
-½ÇÇà°á°ú
+ì‹¤í–‰ê²°ê³¼
 30 20
 100 50
 Z A
 5.555 1.111
 campus multi
-Ä·ÆÛ½º ¸ÖÆ¼
+ìº í¼ìŠ¤ ë©€í‹°
 */
 
 void swap(int *n1, int *n2)
@@ -53,11 +53,11 @@ void swap(string &s1, string &s2)
 	s2 = tmp;
 }
 
-void swap(char *c1, char *c2, int size) // ¹è¿­ º¯¼ö µ¿Àû ÇÒ´ç
+void swap(char *c1, char *c2, int size) // ë°°ì—´ ë³€ìˆ˜ ë™ì  í• ë‹¹
 {
 	char* tmp = new char[size];
 
-	strcpy(tmp, c1); // strcpy : from¿¡ ÀÖ´Â ÁÖ¼Ò¸¦ to·Î º¹»ç
+	strcpy(tmp, c1); // strcpy : fromì— ìˆëŠ” ì£¼ì†Œë¥¼ toë¡œ ë³µì‚¬
 	strcpy(c1, c2);
 	strcpy(c2, tmp);
 
@@ -86,7 +86,7 @@ int main()
 	swap(s1, s2);
 	cout << s1 << ' ' << s2 << endl;
 
-	char s3[20] = "¸ÖÆ¼", s4[20] = "Ä·ÆÛ½º";
+	char s3[20] = "ë©€í‹°", s4[20] = "ìº í¼ìŠ¤";
 	swap(s3, s4, sizeof(s3));
 	cout << s3 << ' ' << s4 << endl;
 
