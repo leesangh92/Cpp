@@ -17,18 +17,18 @@ public:
 		cout << "x : " << x << ", y : " << y << endl;
 	}
 
-	Point operator+(const Point& ref); // ¸â¹öÇÔ¼ö
-	friend Point operator-(const Point& ref1, const Point& ref2); // Àü¿ªÇÔ¼ö
+	Point operator+(const Point& ref); // ë©¤ë²„í•¨ìˆ˜
+	friend Point operator-(const Point& ref1, const Point& ref2); // ì „ì—­í•¨ìˆ˜
 };
 
-Point Point::operator+(const Point& ref) // ¸â¹öÇÔ¼ö
+Point Point::operator+(const Point& ref) // ë©¤ë²„í•¨ìˆ˜
 {
 	Point tmp(x + ref.x, y + ref.y);
 
 	return tmp;
 }
 
-Point operator-(const Point &ref1, const Point &ref2) // Àü¿ªÇÔ¼ö
+Point operator-(const Point &ref1, const Point &ref2) // ì „ì—­í•¨ìˆ˜
 {
 	Point tmp(ref1.x - ref2.x, ref1.y - ref2.y);
 
@@ -40,11 +40,11 @@ int main()
 	Point p1(1, 1);
 	Point p2(2, 2);
 
-	//¸â¹öÇÔ¼ö·Î ±¸Çö
+	//ë©¤ë²„í•¨ìˆ˜ë¡œ êµ¬í˜„
 	Point p3 = p1 + p2; // operator+(p2)
 	p3.showData();
 
-	//Àü¿ªÇÔ¼ö·Î ±¸Çö
+	//ì „ì—­í•¨ìˆ˜ë¡œ êµ¬í˜„
 	Point p4 = p3 - p1; // operator-(p3, p1)
 	p4.showData();
 
