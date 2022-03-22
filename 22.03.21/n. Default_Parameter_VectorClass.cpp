@@ -9,7 +9,7 @@ private:
 	int* p;
 	int size;
 public:
-	MyVector(int n = 10) // µğÆúÆ® »ı¼ºÀÚ¸¦ »ı¼ºÇÏÁö ¾Ê¾Æµµ µÈ´Ù.
+	MyVector(int n = 10) // ë””í´íŠ¸ ìƒì„±ìë¥¼ ìƒì„±í•˜ì§€ ì•Šì•„ë„ ëœë‹¤.
 	{
 		p = new int[n];
 		size = n;
@@ -37,7 +37,7 @@ public:
 			cout << *(p + i) << ", ";
 			sum += p[i];
 		}
-		cout << ", ÇÕ => " << sum << endl;
+		cout << ", í•© => " << sum << endl;
 	}
 };
 
@@ -47,8 +47,8 @@ int main()
 	MyVector* v2;
 	v2 = new MyVector(20);
 
-	v1->MyVector_data(); // v1 ¹è¿­¿ä¼Ò¿¡ °³¼ö¸¸Å­ 1ºÎÅÍ °ªÀ» Áõ°¡½ÃÅ°¸é¼­ Ã¤¿î´Ù
-	v1->MyVector_sum(); // v1 ¹è¿­ÀÇ °ªÀ» Ãâ·ÂÇÑ ÈÄ, ÇÕÀ» ±¸ÇÏ¿© Ãâ·Â
+	v1->MyVector_data(); // v1 ë°°ì—´ìš”ì†Œì— ê°œìˆ˜ë§Œí¼ 1ë¶€í„° ê°’ì„ ì¦ê°€ì‹œí‚¤ë©´ì„œ ì±„ìš´ë‹¤
+	v1->MyVector_sum(); // v1 ë°°ì—´ì˜ ê°’ì„ ì¶œë ¥í•œ í›„, í•©ì„ êµ¬í•˜ì—¬ ì¶œë ¥
 
 	v2->MyVector_data();
 	v2->MyVector_sum();
