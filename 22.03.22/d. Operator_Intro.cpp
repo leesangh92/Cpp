@@ -19,7 +19,7 @@ public:
 	}
 
 	//p2 = p1 + 30
-	Point operator+(int value) // ¿¬»êÀÚ overloading ÇÔ¼ö
+	Point operator+(int value) // ì—°ì‚°ì overloading í•¨ìˆ˜
 	{
 		Point tmp;
 
@@ -29,7 +29,7 @@ public:
 		return tmp;
 	}
 
-	Point(const Point& ref) // º¹»ç »ı¼ºÀÚ
+	Point(const Point& ref) // ë³µì‚¬ ìƒì„±ì
 	{
 		cout << "Point(const Point &ref)" << endl;
 		x = ref.x;
@@ -43,7 +43,7 @@ int main()
 	p1.showData();
 
 	        // operator + (30)
-	Point p2 = p1 + 30; // F9 : Áß°£Á¡(break point) // °´Ã¼°¡ »ı¼ºµÊ°ú µ¿½Ã¿¡ ÃÊ±âÈ­°¡ µÉ ¶§ º¹»ç »ı¼ºÀÚ°¡ »ı¼ºµÈ´Ù.
+	Point p2 = p1 + 30; // F9 : ì¤‘ê°„ì (break point) // ê°ì²´ê°€ ìƒì„±ë¨ê³¼ ë™ì‹œì— ì´ˆê¸°í™”ê°€ ë  ë•Œ ë³µì‚¬ ìƒì„±ìê°€ ìƒì„±ëœë‹¤.
 	p2.showData();
 
 	return 0;
