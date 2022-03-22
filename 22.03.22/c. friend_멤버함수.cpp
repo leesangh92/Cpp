@@ -2,12 +2,12 @@
 
 using namespace std;
 
-class BBB; // Àü¹æ ¼±¾ğ : AAA Å¬·¡½º°¡ BBB Å¬·¡½º¸¦ »ç¿ëÇÏ¹Ç·Î ¼±¾ğÇÏ¿©¾ß ÇÑ´Ù.
+class BBB; // ì „ë°© ì„ ì–¸ : AAA í´ë˜ìŠ¤ê°€ BBB í´ë˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ë¯€ë¡œ ì„ ì–¸í•˜ì—¬ì•¼ í•œë‹¤.
 
 class AAA
 {
 public:
-	void setData(BBB& ref, int value); // Àü¹æ ¼±¾ğ ÇÊ¿ä.
+	void setData(BBB& ref, int value); // ì „ë°© ì„ ì–¸ í•„ìš”.
 
 	void getData(BBB& ref);
 };
@@ -27,7 +27,7 @@ public:
 	friend void AAA::getData(BBB& ref);
 };
 
-// BBB Å¬·¡½º friend ¼±¾ğ¹® µÚ¿¡ ÇÔ¼ö Á¤ÀÇ¸¦ ÇØ¾ß AAA Å¬·¡½ºÀÇ ¸Ş¼­µå¿¡¼­ BBB ÀÚ·áÇüÀ» ÇØ¼®ÇÒ ¼ö ÀÖ´Ù. 
+// BBB í´ë˜ìŠ¤ friend ì„ ì–¸ë¬¸ ë’¤ì— í•¨ìˆ˜ ì •ì˜ë¥¼ í•´ì•¼ AAA í´ë˜ìŠ¤ì˜ ë©”ì„œë“œì—ì„œ BBB ìë£Œí˜•ì„ í•´ì„í•  ìˆ˜ ìˆë‹¤. 
 void AAA::setData(BBB& ref, int value)
 {
 	ref.data = value;
