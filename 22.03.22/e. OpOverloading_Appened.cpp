@@ -97,15 +97,15 @@ int main()
 		cout << "Not Equal." << endl;
 
 	if (p1 != p2)
-		cout << "°°Áö¾Ê´Ù." << endl;
+		cout << "ê°™ì§€ì•Šë‹¤." << endl;
 	else
-		cout << "°°´Ù." << endl << endl;
+		cout << "ê°™ë‹¤." << endl << endl;
 
 	p1.ShowPosition(); //10,10  
 	p2.ShowPosition(); //3, 3
 
-	p1 += p2; // ¸®ÅÏ °ªÀÌ voidÀÌ¾îµµ °¡´ÉÇÑ ÇÔ¼ö
-	//(p1 += p2).ShowPosition(); // ¸®ÅÏ °ªÀÌ ÂüÁ¶ÀÚÀÌ¸é °¡´ÉÇÑ ÇÔ¼ö
+	p1 += p2; // ë¦¬í„´ ê°’ì´ voidì´ì–´ë„ ê°€ëŠ¥í•œ í•¨ìˆ˜
+	//(p1 += p2).ShowPosition(); // ë¦¬í„´ ê°’ì´ ì°¸ì¡°ìì´ë©´ ê°€ëŠ¥í•œ í•¨ìˆ˜
 	p1.ShowPosition();  //13, 13   
 
 	p1 -= p2;
