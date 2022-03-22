@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// ¹İµå½Ã Àü¿ªÇÔ¼ö·Î ¿À¹ö·ÎµùÀÌ µÇ¾î¾ß ÇÏ´Â °æ¿ì : Ã¹¹øÂ° ÀÎÀÚ°¡ this°¡ ¾Æ´Ñ °æ¿ì.
+// ë°˜ë“œì‹œ ì „ì—­í•¨ìˆ˜ë¡œ ì˜¤ë²„ë¡œë”©ì´ ë˜ì–´ì•¼ í•˜ëŠ” ê²½ìš° : ì²«ë²ˆì§¸ ì¸ìê°€ thisê°€ ì•„ë‹Œ ê²½ìš°.
 
 class Point
 {
@@ -22,7 +22,7 @@ public:
 	friend Point operator+(int n, const Point& ref);
 };
 
-Point operator+(int n, const Point& ref) // Àü¿ªÇÔ¼ö
+Point operator+(int n, const Point& ref) // ì „ì—­í•¨ìˆ˜
 {
 	Point tmp(n + ref.x, n + ref.y);
 
@@ -32,8 +32,8 @@ Point operator+(int n, const Point& ref) // Àü¿ªÇÔ¼ö
 int main()
 {
 	Point p1(1, 1);
-	Point p2 = 30 + p1; //30.operator+(p1) // Ã¹¹øÂ° ÀÎÀÚ°¡ ¹İµå½Ã this(¸â¹ö°´Ã¼)¿©¾ß¸¸ ÇÑ´Ù. // ¸â¹öÇÔ¼ö ÀÛ¼º ºÒ°¡
-	                    //operator+(30, p2) // Àü¿ªÇÔ¼ö·Î ÀÛ¼º
+	Point p2 = 30 + p1; //30.operator+(p1) // ì²«ë²ˆì§¸ ì¸ìê°€ ë°˜ë“œì‹œ this(ë©¤ë²„ê°ì²´)ì—¬ì•¼ë§Œ í•œë‹¤. // ë©¤ë²„í•¨ìˆ˜ ì‘ì„± ë¶ˆê°€
+	                    //operator+(30, p2) // ì „ì—­í•¨ìˆ˜ë¡œ ì‘ì„±
 	p2.showData();
 
 	return 0;
