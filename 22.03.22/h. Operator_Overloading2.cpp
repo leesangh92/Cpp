@@ -66,7 +66,7 @@ int main()
 	(++(++p1)).showData();
 	p1.showData();
 
-	--p1; // p1.operator-() // 멤버함수 호출 방법
+	--p1; // operator--(p1) // 전역함수 호출 방법
 	p1.showData();
 
 	cout << "====================" << endl;
@@ -75,13 +75,13 @@ int main()
 	//p1++; // p1.operator++() // 전위연산
 
 	Point p2(1, 1);
-	Point p3 = p2++; // p1.operator++(int)
+	Point p3 = p2++; // p1.operator++(int) // 멤버함수 호출 방법
 	p2.showData(); // 2, 2
 	p3.showData(); // 1, 1
 
 	cout << "====================" << endl;
 
-	Point p4 = p2--; // p2.operator--(int)
+	Point p4 = p2--; // operator--(p2, int) // 전역함수 호출 방법
 	p2.showData(); // 1, 1
 	p4.showData(); // 2, 2
 
