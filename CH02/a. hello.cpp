@@ -1,12 +1,12 @@
-#include <iostream> // ì…, ì¶œë ¥ ë“± ë‹¤ì–‘í•œ ë©”ì„œë“œë¥¼ í¬í•¨í•˜ëŠ” ê°ì²´ì§€í–¥ ë¼ì´ë¸ŒëŸ¬ë¦¬ë¥¼ ì œê³µí•˜ëŠ” í—¤ë”íŒŒì¼
+#include <iostream> // ÀÔ, Ãâ·Â µî ´Ù¾çÇÑ ¸Ş¼­µå¸¦ Æ÷ÇÔÇÏ´Â °´Ã¼ÁöÇâ ¶óÀÌºê·¯¸®¸¦ Á¦°øÇÏ´Â Çì´õÆÄÀÏ
 
 int main()
 {
 	int num = 100;
 
-	// std : iostreamì— ì„ ì–¸ëœ ê°ì²´ë“¤ì´ stdë¼ëŠ” namespaceì— ì •ì˜ë˜ì–´ ìˆë‹¤. stdì— ìˆëŠ” cout, endlì„ ì‚¬ìš©í•˜ê² ë‹¤.
+	// std : iostream¿¡ ¼±¾ğµÈ °´Ã¼µéÀÌ std¶ó´Â namespace¿¡ Á¤ÀÇµÇ¾î ÀÖ´Ù. std¿¡ ÀÖ´Â cout, endlÀ» »ç¿ëÇÏ°Ú´Ù.
 
-	// << : ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ì—°ì‚°ì
+	// << : Ãâ·Â ½ºÆ®¸² ¿¬»êÀÚ
 	std::cout << "hello world" << std::endl;
 	std::cout << "INFINITT";
 	std::cout << " healthcare" << std::endl;
