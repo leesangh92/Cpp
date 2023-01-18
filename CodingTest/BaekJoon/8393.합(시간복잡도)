@@ -1,0 +1,29 @@
+#include <cstdio>
+
+int main() 
+{
+    int n;
+    int sum=0; // 초기화
+    
+    // scnaf와 cin의 차이점
+    scanf("%d", &n);
+    
+    /*
+    #1
+    일반적인 for문을 통한 풀이
+    for(int i=0; i<=n; i++)
+    {
+      sum += i;
+    }
+    */
+    
+    /*#2
+    1부터 n까지의 합 공식
+    */
+    sum = n*(n+1)/2;
+    
+    // printf와 cout의 차이점
+    printf("%d", sum);
+    
+    return 0;
+}
