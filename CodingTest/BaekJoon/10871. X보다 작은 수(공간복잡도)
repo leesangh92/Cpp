@@ -40,11 +40,14 @@ int main()
     //#2
     for(int i=0; i<N; i++)
     {
+        //배열의 원소를 입력받음과 동시에
         int A;
-        cin >> A;
+        std::cin >> A;
+        
+        //조건에 맞는지 확인하여 결과 값 출력
         if(A < X)
         {
-            cout << A;
+            std::cout << A;
         }
     }
     
