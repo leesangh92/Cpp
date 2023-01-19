@@ -12,16 +12,26 @@ X보다 작은 수를 입력받은 순서대로 공백으로 구분해 출력한
 */
 
 #include <iostream>
-using namespace std;
-int main() {
+
+int main() 
+{
     int N, X;
-    cin >> N >> X;
+    
+    std::cin >> N >> X;
+    
     int A[N];
+    
     for (int i=0; i<N; i++)
-        cin >> A[i];
-    for(int i=0; i<N; i++){
-        if (A[i]<X)
-            cout << A[i] << ' ';
+    {
+        std::cin >> A[i];
     }
+    for(int i=0; i<N; i++)
+    {
+        if (A[i]<X)
+        {
+            std::cout << A[i] << ' ';
+        }
+    }
+    
     return 0;
 }
