@@ -44,10 +44,10 @@ int main()
         int A;
         std::cin >> A;
         
-        //조건에 맞는지 확인하여 결과 값 출력
+        //조건의 맞는지 확인하여 결과 값 출력
         if(A < X)
         {
-            std::cout << A;
+            std::cout << A << ' ';
         }
     }
     
