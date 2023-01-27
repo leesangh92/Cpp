@@ -29,12 +29,28 @@
 
 출력 예제
 4
+
+
+가능한 빨리 끝나는 다음 이벤트를 선택.
+
 */
 
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
+bool compare(std::pair<int, int>schedule1, std::pair<int, int>schedule2)
+{
+  if(schedule1.first == schedule2.first) // 끝나는 시간이 같으면
+  {
+    return schedule1.second < schedule2.second; // 시작 시간이 빠른 순으로 정렬
+  }
+  else
+  {
+    return schedule1.first < schedule2.first;
+  }
+}
+  
 int main()
 {
   int N;
@@ -45,16 +61,18 @@ int main()
     std::cin >> schedule[i].second >> schedule[i].first; // 끝나는 시간으로 정렬하기 위해서 이렇게 입력을 받음
   }
   
-  std::sort(schedule.begin(), schedule.end()); // 정렬
+  std::sort(schedule.begin(), schedule.end(), compare); // 정렬
   
-  int meetingtime = 0;
-  int answer = 0;
+  int meetingend = schedule[0].first; // 끝나는 시간
+  int answer = 1;
   
-  for(int i=0; i<N; i++)
+  for(int i=1; i<N; i++)
   {
-    if(meetingtime <= schedule[i].second)
+    int meetingstart = schedule[i].second; // 시작 시간
+    
+    if(meetingend <= meetingstart)
     {
-      meetingtime = schedule[i].first;
+      meetingend = schedule[i].first;
       answer++;
     }
   }
