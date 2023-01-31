@@ -26,3 +26,12 @@
 출력 예제
 2
 */
+
+#include <iostream>
+
+int main()
+{
+
+  
+  return 0;
+}
