@@ -50,7 +50,9 @@ bool compare(std::pair<int, int>schedule1, std::pair<int, int>schedule2)
     return schedule1.first < schedule2.first;
   }
 }
-  
+
+*/
+
 int main()
 {
   int N;
