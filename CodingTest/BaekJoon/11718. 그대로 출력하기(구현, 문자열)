@@ -32,10 +32,9 @@ int main()
     
     return 0;
 }
+*/
+
 /*
-
-
-
 #include <iostream>
 #include <string>
 
@@ -52,5 +51,24 @@ int main()
         std::cout << input << "\n";
     }
     
+    return 0;
+}
+*/
+
+#include <iostream>
+#include <algorithm>
+#include <string>
+
+int main()
+{
+    std::string input;
+    getline(std::cin, input);
+    
+    while(input != "\0")
+    {
+        std::cout << input << "\n";
+        getline(std::cin, input);
+    }
+        
     return 0;
 }
