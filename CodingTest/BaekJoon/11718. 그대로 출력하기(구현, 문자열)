@@ -28,7 +28,7 @@ int main()
     std::string input = "";
     std::cin >> input; // 입력받은 그대로 
     std::cout << input << "\n"; // 출력
-    //이렇게 하면 왜 안되는 거지
+    //이렇게 하면 입력 제한이 없음. if문이나 while문으로 입력 조건 제한을 걸어준다.
     
     return 0;
 }
@@ -55,6 +55,7 @@ int main()
 }
 */
 
+/*
 #include <iostream>
 #include <algorithm>
 #include <string>
@@ -65,6 +66,27 @@ int main()
     getline(std::cin, input);
     
     while(input != "\0")
+    {
+        std::cout << input << "\n";
+        getline(std::cin, input);
+    }
+        
+    return 0;
+}
+*/
+
+
+#include <iostream>
+#include <algorithm>
+#include <string>
+
+int main()
+{
+    std::string input;
+    getline(std::cin, input);
+    
+    // cin.eof()는 eofbit를 검사해서 마지막 입력값에 다다랐으면 true를, 그렇지 않으면 flase를 반환.
+    while(!std::cin.eof())
     {
         std::cout << input << "\n";
         getline(std::cin, input);
