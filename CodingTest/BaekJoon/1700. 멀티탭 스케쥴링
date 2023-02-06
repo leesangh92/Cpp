@@ -28,10 +28,108 @@
 */
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
-int main()
-{
+int N,K,answer;
+std::vector<int> order;
 
-  
-  return 0;
+int multiTap[101];
+
+int main() {
+    /* cin,cout 속도향상
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL); cout.tie(NULL);
+    */
+    
+    std::cin >> N >> K;
+    for(int i=0; i<K; i++)
+    {
+        int input;
+        std::cin >> input;
+        order.push_back(input);
+    }
+    
+    answer = 0;
+    
+    for(int i=0; i<order.size(); i++)
+    {
+        int item = order[i];
+        
+        // 이미 콘센트가 꽂혀있는가?
+        bool found = false;
+        for(int j=1; j<=N; j++)
+        {
+            if(multiTap[j] == item)
+            {
+                found = true;
+                break;
+            }
+        }
+        
+        // 콘센트가 안꽂혀있다면
+        if(!found){
+            // 빈 콘센트가 존재한다면
+            bool empty = false;
+            for(int j=1; j<=N; j++)
+            {
+                if(multiTap[j] == 0)
+                {
+                    multiTap[j] = item;
+                    empty = true;
+                    break;
+                }
+            }
+            
+            // 빈 콘센트가 존재하지 않아 하나를 빼야한다면
+            if(!empty){
+                int idx = 0;
+                int max_value = 0;
+                bool reuse = true;
+                
+                // 멀티탭의 전기용품들을 탐색
+                for(int j=1; j<=N; j++)
+                {
+                    int count = 1;
+                    bool end = true;
+                    
+                    for(int l=i; l<order.size(); l++,count++)
+                    {
+                        if(multiTap[j] == order[l])
+                        {
+                            if(count > max_value)
+                            {
+                                max_value = count;
+                                idx = j;
+                            }
+                            
+                            // 해당 전기용품은 추후에 재사용됨
+                            end = false;
+                            break;
+                        }
+                    }
+                    
+                    // 멀티텝의 물건들이 추후에 사용되지 않는 경우
+                    if(end)
+                    {
+                        multiTap[j] = item;
+                        answer++;
+                        reuse = false;
+                        break;
+                    }
+                }
+                
+                // 멀티탭의 물건들이 추후에 전부 사용되는 경우
+                if(reuse)
+                {
+                    multiTap[idx] = item;
+                    answer++;
+                }
+            }
+        }
+    }
+    
+    std::cout << answer << "\n";
+    
+    return 0;
 }
